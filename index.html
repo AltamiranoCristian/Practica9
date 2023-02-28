@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        video,
+        iframe {
+            box-shadow: 0 0 50px -10px #000;
+            border-radius: 5px;
+            border: 2px solid aqua;
+            width: 300px;
+            height: 225px
+        }
+
+        .photo {
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            border: 2px solid aqua;
+            box-shadow: 0 0 50px -10px 
+
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header {
+            background-color: rgb(0, 80, 80);
+            color: #fff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #00bcae;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        .menu a{
+            text-decoration: none;
+            color: rgb(0, 80, 80);
+        }
+        
+        .menu li:hover {
+            background-color: rgb(0, 46, 80);
+                        color: aqua
+
+        }
+
+        .aside {
+            background-repeat: no-repeat;
+                background-image: url("media/rem.jpg");
+                background-size: cover;
+                background-position: center;
+        }
+
+        .footer {
+            background-color: rgb(0, 80, 80);
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        /* For width 400px and larger: */
+        @media only screen and (min-width: 400px) {
+            .aside {
+                background-repeat: no-repeat;
+                background-image: url("media/rem2.jpg");
+                background-size: cover;
+                background-position: center;
+                padding: 150px
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+            .aside {
+            background-repeat: no-repeat;
+                background-image: url("media/rem.jpg");
+                background-size: cover;
+                background-position: center;
+                padding: 111px
+        }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Unidad 2</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-3 menu">
+            <ul>
+                <a href="https://altamiranocristian.github.io/Practica1/"><li>Practica 1</li></a>
+               <a href="https://altamiranocristian.github.io/Practica2/"><li>Practica 2</li></a>
+                <a href="https://altamiranocristian.github.io/Practica3/"><li>Practica 3</li></a>
+                <a href="https://altamiranocristian.github.io/Practica4/"><li>Practica 4</li></a>
+                <a href="https://altamiranocristian.github.io/Practica5/"><li>Practica 5</li></a>
+                <a href="https://altamiranocristian.github.io/Practica6/"><li>Practica 6</li></a>
+                <a href="https://altamiranocristian.github.io/Practica7/"><li>Practica 7</li></a>
+                <a href="https://altamiranocristian.github.io/Practica8/"><li>Practica 8</li></a>
+            </ul>
+        </div>
+
+        <div class="col-6">
+            <h1>Mi CV</h1>
+            <figure>
+                <img class="photo" id="imagen" src="media/avatar.jpg" alt="picture">
+                <figcaption>
+                    Foto
+                </figcaption>
+            </figure>
+
+            <figure>
+                <video src="media/presentacion.mp4" controls></video>
+                <figcaption>
+                    Presentacion
+                </figcaption>
+            </figure>
+
+            <figure>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d767.6508937182734!2d-97.1882565291582!3d18.7950832616773!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1676943467463!5m2!1ses-419!2smx" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <figcaption name="fcframe">
+                    Domicilio
+                </figcaption>
+            </figure>
+
+            <div class="content">
+                <h2>Datos personales</h2>
+                <ul>
+                    <li>Nombre: Cristian Emir Altamirano Andrade</li>
+                    <li>Fecha de nacimiento:22 de Julio de 2002</li>
+                    <li>Lugar de nacimiento: Nogales, Veracruz</li>
+                </ul>
+                <h2>Formaci&oacute;n academica</h2>
+                <ul>
+                    <li>Universidad: Tecnol&oacute;gico Nacional de M&eacute;xico Campus Orizaba</li>
+                    <li>Bachillerato: Centro de Estudios Tecnol&oacute;gicos, Industrial y de Servicios No. 146 </li>
+                    <li>Secundaria: Escuela Secundaria General Ignacio Manuel Altamirano</li>
+                </ul>
+                <h2>Experiencia Laboral</h2>
+                <ul>
+                    <li>Desarrollo de Aplicaciones Web en Lost Limerence&copy;</li>
+                    <li>Administraci&oacute;n de Bases de Datos en Arasaka&copy;</li>
+                    <li>Seguridad Inform&aacute;tica en MiliTech&copy;</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-3 right">
+            <div class="aside">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with &hearts;
+    </div>
+
+</body></html>
